@@ -137,28 +137,7 @@ describe('googledashboardsmoketest',function() {
 		//browser.waitForAngular();
 		browser.wait(EC4.visibilityOf(count),15000);
 		count.click();
-		browser.sleep(5);
-	});
-
-	//filter students based on groups test
-	it('should filter based on groups', function() {
-		var studentpanel = element(by.css('student-panel:nth-child(1) > div'));
-		var groupedit = element(by.css('[ng-if="groupEdit"]'));
-		var groupselect = element(by.css('input-group-addon.active.group_3.touch-friendly'));
-		var EC1 = protractor.ExpectedConditions;
-		console.log('test filter by groups');
-		studentpanel.isPresent();
-		//browser.actions().mouseMove('elementdropdown').perform();
-		expect(element(by.css('[ng-repeat="item in standardItems track by item.student.email"]:nth-child(2)')).isPresent()).toBe(true);
-		browser.wait(EC1.visibilityOf(groupedit),10000);
-		browser.actions().mouseMove(groupedit).perform();
-		groupselect.click();
-		browser.sleep(7000);
-		browser.wait(EC1.visibilityOf(studentpanel),15000);
-		element.all(by.css('[ng-repeat="item in standardItems track by item.student.email"]:nth-child(2)')).then(function(item) {
-			expect(item.lenght).toBe(0);
-		});
-		console.log('refreshed');
+		browser.sleep(4000);
 	});
 
 	//filter students based on groups test
