@@ -11,15 +11,11 @@ exports.config = {
   //specs: ['singledashboardsmoketest.js','dmgoogledashboard.smoketest.js','splitdashboard.smoketest.js'],
   specs: ['splitdashboard.smoketest.js','dmgoogledashboard.smoketest.js','singledashboardsmoketest.js'],
   
-  multiCapabilities: [{
-  'browserName': 'firefox',
-  'shardTestFiles': true,
-  'maxInstances': 1
-}, {
+capabilities: {
   'browserName': 'chrome',
   'shardTestFiles': true,
   'maxInstances': 1
-}],
+},
 
   allScriptsTimeout: 20000,
   getPageTimeout: 20000,
